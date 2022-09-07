@@ -1,0 +1,17 @@
+.bg{
+    background-color: rgb(209, 181, 243);
+    color: black;
+}
+
+.titulo{
+    font-family: 'Antonio', sans-serif;
+    font-size: 1.7em;
+}
+
+.categorias{
+    font-family: 'Poppins', sans-serif;
+}
+
+.carrito{
+    width: 50%;
+}
