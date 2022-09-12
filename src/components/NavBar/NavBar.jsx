@@ -10,10 +10,10 @@ const NavBar = () => {
     <Navbar className='bg' expand="lg">
       <Container>
       <Navbar.Brand className='titulo' href="#home">
-            ESSENTIALS
+      {/* <img>href='src\logo.svg'</img> */}
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-center'>
           <Nav className='categorias'>
             <Nav.Link href="#link">CATEGORIA 1</Nav.Link>
             <Nav.Link href="#link">CATEGORIA 2</Nav.Link>
