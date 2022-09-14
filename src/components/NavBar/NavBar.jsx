@@ -10,14 +10,14 @@ const NavBar = () => {
     <Navbar className='bg' expand="lg">
       <Container>
       <Navbar.Brand className='titulo' href="#home">
-      {/* <img>href='src\logo.svg'</img> */}
+      <img src="/adidas.svg" alt='Logo de Adidas' width={50} />
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-center'>
           <Nav className='categorias'>
-            <Nav.Link href="#link">CATEGORIA 1</Nav.Link>
-            <Nav.Link href="#link">CATEGORIA 2</Nav.Link>
-            <Nav.Link href="#link">CATEGORIA 3</Nav.Link>
+            <Nav.Link href="#link">Home</Nav.Link>
+            <Nav.Link href="#link">Jersey</Nav.Link>
+            <Nav.Link href="#link">Football</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <Nav className="justify-content-end" activeKey="/home">

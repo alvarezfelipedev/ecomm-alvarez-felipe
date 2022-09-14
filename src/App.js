@@ -9,7 +9,7 @@ function App() {
       <NavBar />
       <section>
         <ItemCount initial={1} stock={10} />
-        <ItemListContainer/>
+        <ItemListContainer />
       </section>
     </>
   );
