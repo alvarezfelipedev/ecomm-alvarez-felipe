@@ -3,7 +3,7 @@ const dataFromDB = [
         id: 1,
         titulo: "ARGENTINA 22 HOME AUTHENTIC JERSEY",
         precio: '$150',
-        imagen: "https://i.ibb.co/h1XwbP0/argentina-camiseta.png",
+        imagen: "https://i.ibb.co/Rzz4pht/201a71b015f34cd1b116aefd00e27f14-9366.webp",
         descripcion: "White / Light Blue. This product is excluded from all promotional discounts and offers",
         tipo: 'Jersey'
     },

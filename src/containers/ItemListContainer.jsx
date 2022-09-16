@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import fetchData from "../utils/fetchData";
 import dataFromDB from "../utils/data";
 import ItemList from "../components/ItemList/ItemList";
+import ItemCount from "../components/ItemCount/ItemCount";
 
 const ItemListContainer = () => {
 
@@ -14,12 +15,12 @@ const ItemListContainer = () => {
       .then(result => setData(result))
       .catch(err => console.log(err))
 
-    console.log('component did mount')
   }, [])
 
   return (
     <>
       <ItemList items={data}/>
+      <ItemCount initial={1} stock={10} />
     </>
   )
 }
