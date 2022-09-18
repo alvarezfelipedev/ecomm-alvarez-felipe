@@ -1,4 +1,3 @@
-
 const ItemDetail = ({items}) => {
     return (
       <div>

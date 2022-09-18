@@ -27,12 +27,9 @@ const ItemCount = ({ initial, stock }) => {
     function agregarAlCarro() {
         setContador(contador);
         setAgregadoAlCarro(!agregadoAlCarro);
-        console.log('me agregue al carrito');
     }
 
     useEffect(() => {
-        console.log('me ejecute')
-
         return () => {
             <h1>Hola</h1>
         }

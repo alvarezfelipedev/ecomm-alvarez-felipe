@@ -3,13 +3,17 @@
     color: black;
 }
 
-.titulo{
-    font-family: 'Antonio', sans-serif;
-    font-size: 1.7em;
-}
-
 .categorias{
     font-family: 'Poppins', sans-serif;
+}
+
+.categoria{
+    text-decoration: none;
+    color: black;
+}
+
+.categoria:hover{
+    color: rgb(51,51,51);
 }
 
 .carrito{
