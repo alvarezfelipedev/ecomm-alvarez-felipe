@@ -1,9 +1,9 @@
 let is_ok = true
 
 let fetchData = (time, task) => {
-    return new Promise ((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (is_ok){
+            if (is_ok) {
                 resolve(task)
             } else {
                 reject("Error")

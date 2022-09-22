@@ -1,22 +1,22 @@
-.bg{
+.bg {
     background-color: rgb(209, 181, 243);
     color: black;
 }
 
-.categorias{
+.categorias {
     font-family: 'Poppins', sans-serif;
 }
 
-.categoria{
+.categoria {
     text-decoration: none;
     color: black;
 }
 
-.categoria:hover{
-    color: rgb(51,51,51);
+.categoria:hover {
+    color: rgb(51, 51, 51);
 }
 
-.carrito{
+.carrito {
     width: 50%;
     color: black;
 }

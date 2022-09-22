@@ -1,0 +1,31 @@
+/* ----- imports -----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.imagen {
+    width: 20%;
+}
+
+.titulo-tipo .titulo- {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.titulo-tipo h2 {
+    font-family:'Inter', sans-serif;
+    font-size: 1.4em;
+}
+
+.descripcion-caja h2,
+.talles-caja h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+
+}

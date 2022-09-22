@@ -6,7 +6,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/Rzz4pht/201a71b015f34cd1b116aefd00e27f14-9366.webp",
         descripcion: "White / Light Blue. This product is excluded from all promotional discounts and offers",
         category: "jersey",
-        tipo: 'Jersey'
+        tipo: 'Jersey',
+        stock:'10'
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/FHpNJDC/3107ce0daa9e436889abaefd00d71d01-9366.webp",
         descripcion: "Legacy Indigo / Purple Rush. This product is excluded from all promotional discounts and offers",
         category: "jersey",
-        tipo: 'Jersey'
+        tipo: 'Jersey',
+        stock:'15'
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/L87zr6X/441bfecee2894233b078aefd00dfd946-9366.webp",
         description: "Team Power Red 2 / Team Navy Blue 2. This product is excluded from all promotional discounts and offers",
         category: "jersey",
-        tipo: 'Jersey'
+        tipo: 'Jersey',
+        stock:'4'
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/gd6LpB7/7b7d9bf75fd2441db27caefd00eeba25-9366.webp",
         descripcion: "Bright Yellow. This product is excluded from all promotional discounts and offers",
         category: "jersey",
-        tipo: 'Jersey'
+        tipo: 'Jersey',
+        stock:'11'
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/X8yQPTZ/d61eb17bd05b40a7a470aefd00f38f36-9366.webp",
         descripcion: "Japan Blue. This product is excluded from all promotional discounts and offers",
         category: "jersey",
-        tipo: 'Jersey'
+        tipo: 'Jersey',
+        stock:'20'
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/gtkL6Sh/ed2bc77d26724c6a8b38ae6700e7a850-9366.webp",
         descripcion: "White / Clear Blue / Night Indigo",
         category: "ball",
-        tipo: 'Ball'
+        tipo: 'Ball',
+        stock:'23'
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/gth6rwS/54ff0543a9e340c7b7d4ae7600ee4e63-9366.webp",
         descripcion: 'White / Pantone. This product is excluded from all promotional discounts and offers',
         category: "ball",
-        tipo: 'Ball'
+        tipo: 'Ball',
+        stock:'55'
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/VxqsG9M/7f873d7146094e258974ae08005a9a10-9366.webp",
         descripcion: "Cloud White / Gold Metallic / Cloud White",
         category: "cleats",
-        tipo: 'Cleats'
+        tipo: 'Cleats',
+        stock:'34'
     },
     {
         id: 9,
@@ -79,6 +87,7 @@ const dataFromDB = [
         descripcion: "Core Black / Core Black / Grey Five",
         category: "cleats",
         tipo: 'Cleats',
+        stock:'12'
     },
     {
         id: 10,
@@ -87,7 +96,8 @@ const dataFromDB = [
         imagen: "https://i.ibb.co/h1m1w9r/bef4d4243ccc4906b23eae08006a6b8e-9366.webp",
         descripcion: "Cloud White / Team Colleg Gold 2 / Cloud White",
         category: "cleats",
-        tipo: 'Cleats'
+        tipo: 'Cleats',
+        stock:'16'
     }
 ];
 
