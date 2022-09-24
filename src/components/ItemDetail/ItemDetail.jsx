@@ -4,15 +4,19 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import ItemCount from "../ItemCount/ItemCount";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { CartContext } from "../CartContext/CartContext";
 
 const ItemDetail = ({ items }) => {
   const [itemCount, setItemCount] = useState(0);
+  const ctx = useContext(CartContext)
 
   const onAdd = (qty) => {
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
       showConfirmButton: false,
+      margin: "50px",
       timer: 1000,
       timerProgressBar: false,
       didOpen: (toast) => {
@@ -26,6 +30,7 @@ const ItemDetail = ({ items }) => {
       title: `You have selected ${qty} items.`,
     });
     setItemCount(qty);
+    ctx.addItem(items,qty);
   };
 
   return (

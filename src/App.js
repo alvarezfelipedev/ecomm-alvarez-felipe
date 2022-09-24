@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Cart from './components/CartWidget/Cart';
+import CartContextProvider from './components/CartContext/CartContext';
+import Cart from './components/Cart/Cart';
 import NavBar from "./components/NavBar/NavBar";
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import ItemListContainer from './containers/ItemListContainer';
@@ -8,6 +9,7 @@ import ItemListContainer from './containers/ItemListContainer';
 function App() {
   return (
     <>
+    <CartContextProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -17,6 +19,7 @@ function App() {
           <Route path='/cart' element={<Cart />}></Route>
         </Routes>
       </BrowserRouter>
+    </CartContextProvider>
     </>
   );
 }
