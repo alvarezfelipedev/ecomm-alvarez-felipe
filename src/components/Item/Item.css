@@ -1,0 +1,30 @@
+@import url(//db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN);
+
+
+.titulo {
+    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #2f2f2f;
+}
+
+.tipo {
+    font-family: AdihausDIN;
+    font-size: 0.9em;
+    color: #767677
+}
+
+.precio {
+    font-size: 1.2em;
+    color: #2f2f2f;
+    font-weight: bold;
+}
+
+.details {
+    color: white;
+    text-decoration: none;
+}
+
+.details:hover {
+    color: white;
+}

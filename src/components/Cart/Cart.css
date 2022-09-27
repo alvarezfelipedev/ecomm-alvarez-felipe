@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo-cart {
+    text-align: center;
+}
+
+.btn-delete-all {
+    margin-left: 1px;
+    justify-content:end ;
+}
+
+.img-cart {
+    width: 10%;
+    margin-left: 50px;
+}
+
+.btn-delete-item {
+    margin-left: 50px;
+
+}
