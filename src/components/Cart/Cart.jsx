@@ -47,7 +47,7 @@ const Cart = () => {
         <Button className="btn-delete-all" onClick={ctx.clear}>
           DELETE ALL
         </Button>
-        <Button onClick={createOrder}>BUY NOW</Button>
+        <Button disabled={ctx.cartList.length === 0 } onClick={createOrder}>BUY NOW</Button>
 
         {ctx.cartList.map((item) => (
           <ol key={item.id}>

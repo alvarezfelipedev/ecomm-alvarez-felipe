@@ -49,7 +49,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
             className="btn-agregarAlCarro outline-dark"
             onClick={() => onAdd(contador)}
             variant="primary"
-            disabled={stock === 0 && true}
+            disabled={stock === 0 && true }
           >
             Add to cart
           </Button>

@@ -8,11 +8,11 @@ import { collection, getDocs, where, query } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [data, setData] = useState([]);
-  const [spiner ,setspiner]= useState(true)
+  const [spinner, setSpinner] = useState(true)
   const { id } = useParams();
 
   useEffect(() => {
-    setspiner(true)
+    setSpinner(true)
     const fetchNotes = async () => {
       if (id) {
         const q = query(collection(db, 'products'), where('category', '==', id))
@@ -22,7 +22,7 @@ const ItemListContainer = () => {
           ...item.data()
         }))
         setData(dataFromFirestore)
-        setspiner(false)
+        setSpinner(false)
       } else {
         const querySnapshot = await getDocs(collection(db, "products"));
         const dataFromFirestore = querySnapshot.docs.map(item => ({
@@ -30,7 +30,7 @@ const ItemListContainer = () => {
           ...item.data()
         }))
         setData(dataFromFirestore)
-        setspiner(false)
+        setSpinner(false)
       }
     }
     fetchNotes()
@@ -43,10 +43,17 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <>{spiner===true?<h2>cargando...</h2>:
-      <ItemList items={data} />
+    <>
+    {
+      spinner === true 
+      ? 
+      <div className="d-flex">
+
+        <img className="ball rotate-vertical-center" src="https://i.ibb.co/94BPgG7/ball-frente.png" alt="loading" /> 
+        
+        </div>
+      : <ItemList items={data} />
     }
-      
     </>
   );
 };
