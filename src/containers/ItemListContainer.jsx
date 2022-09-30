@@ -8,9 +8,11 @@ import { collection, getDocs, where, query } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [data, setData] = useState([]);
+  const [spiner ,setspiner]= useState(true)
   const { id } = useParams();
 
   useEffect(() => {
+    setspiner(true)
     const fetchNotes = async () => {
       if (id) {
         const q = query(collection(db, 'products'), where('category', '==', id))
@@ -20,6 +22,7 @@ const ItemListContainer = () => {
           ...item.data()
         }))
         setData(dataFromFirestore)
+        setspiner(false)
       } else {
         const querySnapshot = await getDocs(collection(db, "products"));
         const dataFromFirestore = querySnapshot.docs.map(item => ({
@@ -27,6 +30,7 @@ const ItemListContainer = () => {
           ...item.data()
         }))
         setData(dataFromFirestore)
+        setspiner(false)
       }
     }
     fetchNotes()
@@ -39,8 +43,10 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <>
+    <>{spiner===true?<h2>cargando...</h2>:
       <ItemList items={data} />
+    }
+      
     </>
   );
 };

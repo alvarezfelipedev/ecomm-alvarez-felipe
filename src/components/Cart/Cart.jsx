@@ -54,12 +54,14 @@ const Cart = () => {
             <h1>{item.titulo}</h1>
             <h3>Price: {item.precio}</h3>
             <h3>Quantity:{item.qty}</h3>
+            <p>precio total por item: $ {ctx.calcTotalPerItem(item.id)}</p>
             <img className="img-cart" src={`${item.imagen}`} alt="" />
             <Button className="btn-delete-item" onClick={() => ctx.removeItem(item.id)}>
               Delete this product
             </Button>
           </ol>
         ))}
+        <p>precio total por item: $ {ctx.calcTotal()}</p>
       </div>
     </>
   );
