@@ -7,13 +7,13 @@ import "./Item.css";
 const Item = ({ id, titulo, precio, imagen, tipo }) => {
   return (
     <>
-      <Card style={{ width: "15rem" }}>
-        <Card.Img variant="top" src={imagen} />
+      <Card style={{ width: "15rem" }} className='card-'>
+        <Card.Img className="rotate-vertical-center" variant="top" src={imagen} />
         <Card.Body>
           <Card.Title className="titulo">{titulo}</Card.Title>
           <Card.Title className="tipo">{tipo}</Card.Title>
-          <Card.Text className="precio">{precio}</Card.Text>
-          <Button variant="primary">
+          <Card.Text className="precio">${precio}</Card.Text>
+          <Button className="rotate-vertical-center btn-details">
             <Link className="details" to={`/item/${id}`}>
               Details
             </Link>

@@ -1,28 +1,42 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import fetchData from "../utils/fetchData";
-import dataFromDB from "../utils/data";
 import ItemList from "../components/ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../utils/FirebaseConfig";
+import { collection, getDocs, where, query } from "firebase/firestore";
+
 
 const ItemListContainer = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
-    if (id) {
-      fetchData(
-        2000,
-        dataFromDB.filter((item) => item.category === id)
-      )
-        .then((result) => setData(result))
-        .catch((err) => console.log(err));
-    } else {
-      fetchData(2000, dataFromDB)
-        .then((result) => setData(result))
-        .catch((err) => console.log(err));
+    const fetchNotes = async () => {
+      if (id) {
+        const q = query(collection(db, 'products'), where('category', '==', id))
+        const querySnapshot = await getDocs(q)
+        const dataFromFirestore = querySnapshot.docs.map(item => ({
+          id: item.id,
+          ...item.data()
+        }))
+        setData(dataFromFirestore)
+      } else {
+        const querySnapshot = await getDocs(collection(db, "products"));
+        const dataFromFirestore = querySnapshot.docs.map(item => ({
+          id: item.id,
+          ...item.data()
+        }))
+        setData(dataFromFirestore)
+      }
     }
+    fetchNotes()
   }, [id]);
+
+  useEffect(() => {
+    return (() => {
+      setData([]);
+    })
+  }, []);
 
   return (
     <>

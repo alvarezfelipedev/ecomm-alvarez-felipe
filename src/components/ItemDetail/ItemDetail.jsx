@@ -14,9 +14,12 @@ const ItemDetail = ({ items }) => {
   const onAdd = (qty) => {
     const Toast = Swal.mixin({
       toast: true,
-      position: "top-end",
+      position: 'top-end',
+      target:'#custom-target',
       showConfirmButton: false,
-      margin: "50px",
+      customClass: {
+        container: 'position-absolute'
+      },
       timer: 1000,
       timerProgressBar: false,
       didOpen: (toast) => {
@@ -32,9 +35,11 @@ const ItemDetail = ({ items }) => {
     setItemCount(qty);
     ctx.addItem(items,qty);
   };
-
+  
   return (
-    <div className="detalles-caja">
+    <div className="body">
+      <div className="caja-contenedora">
+      <div id="custom-target"></div>
       <div className="img-caja">
         <img className="imagen" src={items.imagen} alt="" />
       </div>
@@ -54,19 +59,19 @@ const ItemDetail = ({ items }) => {
         <button>L</button>
         <button>XL</button>
         <div>
-          <h3>{items.stock} unidades disponibles</h3>
+          <h3>{items.stock} Units available</h3>
         </div>
       </div>
       <div>
-        <h3>{items.precio}</h3>
+        <h3> $ {items.precio}</h3>
       </div>
       <div>
         {itemCount === 0 ? (
           <ItemCount
-            stock={items.stock}
-            initial={itemCount}
-            onAdd={onAdd}
-            disabled
+          stock={items.stock}
+          initial={itemCount}
+          onAdd={onAdd}
+          disabled
           />
         ) : (
           <Link to="/cart">
@@ -75,6 +80,7 @@ const ItemDetail = ({ items }) => {
             </Button>
           </Link>
         )}
+      </div>
       </div>
     </div>
   );

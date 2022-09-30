@@ -1,9 +1,9 @@
 import Item from "../Item/Item";
+import './ItemList.css'
 
 const ItemList = ({ items }) => {
-  //{data}
   return (
-    <div className="d-flex flex-wrap justify-content-center ">
+    <section className="d-flex flex-wrap justify-content-center list">
       {items.map((item) => (
         <Item
           key={item.id}
@@ -15,7 +15,7 @@ const ItemList = ({ items }) => {
           tipo={item.tipo}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

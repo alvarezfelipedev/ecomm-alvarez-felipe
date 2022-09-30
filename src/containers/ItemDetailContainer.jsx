@@ -1,24 +1,24 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import fetchData from "../utils/fetchData";
-import dataFromDB from "../utils/data";
+// import fetchData from "../utils/fetchData";
+// import dataFromDB from "../utils/data";
 import ItemDetail from "../components/ItemDetail/ItemDetail";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../utils/FirebaseConfig";
+
 
 const ItemDetailContainer = () => {
   const [data, setData] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    if (id) {
-      // DB call
-      fetchData(
-        2000,
-        dataFromDB.find((item) => item.id === parseInt(id))
-      )
-        .then((result) => setData(result))
-        .catch((err) => console.log(err));
+    const obtenerData = async () => {
+      const docSnap = await getDoc(doc(db, "products", id))
+      const producto={id: id, ...docSnap.data()}
+      setData(producto)
     }
+    obtenerData();
   }, [id]);
 
   return (
