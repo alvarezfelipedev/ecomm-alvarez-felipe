@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import Button from "react-bootstrap/Button";
@@ -36,7 +37,11 @@ const Cart = () => {
       });
     });
     ctx.clear();
-    alert(`Your order has been created! This is your ID order: ${newOrderRef.id}`)
+    Swal.fire({
+      icon: 'success',
+      title: `SUCCESSFUL PURCHASE`,
+      text: `Your order has been created! This is your ID order: ${newOrderRef.id}`,
+    })
   }
 
   return (
