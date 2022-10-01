@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+// import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import Button from "react-bootstrap/Button";
@@ -19,9 +19,9 @@ const Cart = () => {
     }))
     let order = {
       buyer: {
-        name: 'Leo Messi',
-        email: 'leomessi10@gmail.com',
-        phone: '1122473010'
+        name: prompt('Enter your name'),
+        email: prompt('Enter your email'),
+        phone: prompt('Enter your cell phone number')
       },
       items: itemsForDB,
       date: serverTimestamp(),
@@ -37,11 +37,13 @@ const Cart = () => {
       });
     });
     ctx.clear();
-    Swal.fire({
-      icon: 'success',
-      title: `SUCCESSFUL PURCHASE`,
-      text: `Your order has been created! This is your ID order: ${newOrderRef.id}`,
-    })
+    // Swal.fire({
+    //   icon: 'success',
+    //   title: `SUCCESSFUL PURCHASE`,
+    //   text: `Your order has been created! This is your ID order: ${newOrderRef.id}`,
+    //   button: 'Okay'
+    // });
+    alert(`Your order has been created! This is your ID order: ${newOrderRef.id}`)
   }
 
   return (
@@ -49,7 +51,7 @@ const Cart = () => {
       <div>
         <h1 className="titulo-cart">YOUR CART</h1>
 
-        <Button className="btn-delete-all" onClick={ctx.clear}>
+        <Button className="btn-delete-all" onClick={ctx.clear} disabled={ctx.cartList.length === 0 }>
           DELETE ALL
         </Button>
         <Button disabled={ctx.cartList.length === 0 } onClick={createOrder}>BUY NOW</Button>
