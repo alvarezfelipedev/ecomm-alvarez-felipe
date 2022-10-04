@@ -3,7 +3,7 @@ import './ItemList.css'
 
 const ItemList = ({ items }) => {
   return (
-    <section className="d-flex flex-wrap justify-content-center list">
+    <section className=" d-flex flex-wrap justify-content-center list">
       {items.map((item) => (
         <Item
           key={item.id}
