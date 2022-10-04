@@ -47,6 +47,11 @@ const NavBar = () => {
                 <Carrito className="carrito" />
               </Link>
             </Nav.Item>
+            <Navbar.Brand>
+              <Link to="/cart">
+              </Link>
+            </Navbar.Brand>
+
           </Nav>
         </Container>
       </Navbar>

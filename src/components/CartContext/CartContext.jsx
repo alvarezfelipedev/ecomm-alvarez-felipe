@@ -11,7 +11,7 @@ const CartContextProvider = ({ children }) => {
 
     const addQtys = (product, qty) => {
         return cartList.map(item => item.id === product.id ? {
-            ...item,qty: item.qty + qty
+            ...item, qty: item.qty + qty
         } : item)
     }
 
@@ -39,17 +39,17 @@ const CartContextProvider = ({ children }) => {
     }
 
     const calcTotalPerItem = (id) => {
-        let product = cartList.find(item => item.id===id)
+        let product = cartList.find(item => item.id === id)
         return (product.qty * product.precio)
     }
 
 
     const calcTotal = () => {
         let totalPerItem = cartList.map(item => calcTotalPerItem(item.id));
-        return totalPerItem.reduce(((previousValue, currentValue) => previousValue + currentValue),0);
+        return totalPerItem.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     }
 
-    
+
     const calcItemsQty = () => {
         let qtys = cartList.map(item => item.qty);
         return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);

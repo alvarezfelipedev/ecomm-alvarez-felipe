@@ -19,9 +19,9 @@ const Cart = () => {
     }))
     let order = {
       buyer: {
-        name: prompt('Enter your name'),
-        email: prompt('Enter your email'),
-        phone: prompt('Enter your cell phone number')
+        name: 'Lionel Messi',
+        email: 'lionelmessi10@gmail.com',
+        phone: '1122573990'
       },
       items: itemsForDB,
       date: serverTimestamp(),
@@ -37,7 +37,7 @@ const Cart = () => {
       });
     });
     ctx.clear();
-    // Swal.fire({
+    // await Swal.fire({
     //   icon: 'success',
     //   title: `SUCCESSFUL PURCHASE`,
     //   text: `Your order has been created! This is your ID order: ${newOrderRef.id}`,
@@ -61,14 +61,14 @@ const Cart = () => {
             <h1>{item.titulo}</h1>
             <h3>Price: {item.precio}</h3>
             <h3>Quantity:{item.qty}</h3>
-            <p>precio total por item: $ {ctx.calcTotalPerItem(item.id)}</p>
+            <p>Total price per Item: $ {ctx.calcTotalPerItem(item.id)}</p>
             <img className="img-cart" src={`${item.imagen}`} alt="" />
             <Button className="btn-delete-item" onClick={() => ctx.removeItem(item.id)}>
               Delete this product
             </Button>
           </ol>
         ))}
-        <p>precio total por item: $ {ctx.calcTotal()}</p>
+        <p>Total price: $ {ctx.calcTotal()}</p>
       </div>
     </>
   );

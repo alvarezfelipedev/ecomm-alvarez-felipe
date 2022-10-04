@@ -1,5 +1,5 @@
 import React from "react";
-import { MdOutlineShoppingBag } from "react-icons/md";
+// import { MdOutlineShoppingBag } from "react-icons/md";
 import { CartContext } from "../CartContext/CartContext";
 import { useContext } from "react";
 import "./CartWidget.css";
@@ -11,10 +11,11 @@ const Carrito = () => {
 
   return (
     <>
-    <div className="cartWidget">
-    <MdOutlineShoppingBag/> 
-    <Badge bg="light" text="dark">{ctx.calcItemsQty()}</Badge>
-    </div>
+      <div className="cartWidget">
+        <img className="img-cart-" src="https://img.icons8.com/ios/20/000000/shopping-bag--v1.png" alt="imagen" />
+        <Badge className="badge- bg-- rounded-circle bg-warning">
+          {ctx.calcItemsQty()}</Badge>
+      </div>
     </>
   );
 };

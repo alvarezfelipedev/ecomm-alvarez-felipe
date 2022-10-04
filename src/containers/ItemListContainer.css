@@ -1,7 +1,5 @@
 .ball {
-    display: flex;
-    width: 10%;
-    justify-content: center;
+    width: 1rem;
 }
 
 .rotate-vertical-center {

@@ -1,3 +1,14 @@
-.cartWidget {
-    color: rgb(34, 34, 34);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+
+
+
+.img-cart- {
+    margin-right: 10px;
+}
+
+.badge- {
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
 }
