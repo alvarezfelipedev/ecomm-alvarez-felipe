@@ -16,7 +16,6 @@ const ItemDetail = ({ items }) => {
     const Toast = Swal.mixin({
       toast: true,
       position: "top-end",
-      target: "#custom-target",
       showConfirmButton: false,
       customClass: {
         container: "position-absolute",
@@ -40,7 +39,6 @@ const ItemDetail = ({ items }) => {
   return (
     <section>
       <div className="caja-contenedora">
-        <div id="custom-target"></div>
         <img className="imagen" src={items.imagen} alt="" />
         <div className="detail-container">
           <div className="titulo-tipo">

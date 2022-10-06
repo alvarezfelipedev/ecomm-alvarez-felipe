@@ -15,13 +15,10 @@
 
 /* --- SWEET ALERT --- */
 
-#custom-target {
-    margin-top: 15px;
-}
-
 .position-absolute {
     position: sticky;
-    margin-top: 70px;
+    margin-top: 50px;
+    margin-right: 15px;
 }
 
 

@@ -11,30 +11,28 @@ const ItemDetailContainer = () => {
   const [spinner, setSpinner] = useState(true);
 
   useEffect(() => {
-    setSpinner(true)
+    setSpinner(true);
     const obtenerData = async () => {
-      const docSnap = await getDoc(doc(db, "products", id))
-      const producto = { id: id, ...docSnap.data() }
-      setData(producto)
+      const docSnap = await getDoc(doc(db, "products", id));
+      const producto = { id: id, ...docSnap.data() };
+      setData(producto);
       setSpinner(false);
-    }
+    };
 
     obtenerData();
   }, [id]);
 
   return (
     <>
-      {
-        spinner === true
-          ?
-          <div className="d-flex justify-content-center m-5">
-            <div className="spinner-border" role="status">
-              <span className="visually-hidden ">Loading...</span>
-            </div>
+      {spinner === true ? (
+        <div className="d-flex justify-content-center m-5">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden ">Loading...</span>
           </div>
-          :
-          <ItemDetail items={data} />
-      }
+        </div>
+      ) : (
+        <ItemDetail items={data} />
+      )}
     </>
   );
 };

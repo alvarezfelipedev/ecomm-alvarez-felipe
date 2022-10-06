@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 
+/* ---CARD--- */
 
 .card- {
     border-color: #F2F3F4;
@@ -20,6 +21,7 @@
     justify-content: space-between;
     flex-direction: inherit;
 }
+
 
 .titulo {
     font-family: AdihausDIN, Helvetica, Arial, sans-serif;
@@ -54,26 +56,15 @@
 
 .btn-details {
     font-family: 'Noto Sans Mono', monospace;
-    color: #767677;
+    color: black;
     background-color: #ffffff;
     border-color: #767677;
 }
 
-
 .btn-details:hover {
+    color: white;
     background-color: #ffc107;
     border-color: white;
-}
-
-
-.details {
-    color: #2f2f2f;
-    text-decoration: none;
-}
-
-
-.details:hover {
-    color: white;
 }
 
 

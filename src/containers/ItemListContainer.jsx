@@ -5,56 +5,56 @@ import { useParams } from "react-router-dom";
 import { db } from "../utils/FirebaseConfig";
 import { collection, getDocs, where, query } from "firebase/firestore";
 
-
 const ItemListContainer = () => {
   const [data, setData] = useState([]);
-  const [spinner, setSpinner] = useState(true)
+  const [spinner, setSpinner] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
-    setSpinner(true)
+    setSpinner(true);
     const fetchNotes = async () => {
       if (id) {
-        const q = query(collection(db, 'products'), where('category', '==', id))
-        const querySnapshot = await getDocs(q)
-        const dataFromFirestore = querySnapshot.docs.map(item => ({
+        const q = query(
+          collection(db, "products"),
+          where("category", "==", id)
+        );
+        const querySnapshot = await getDocs(q);
+        const dataFromFirestore = querySnapshot.docs.map((item) => ({
           id: item.id,
-          ...item.data()
-        }))
-        setData(dataFromFirestore)
-        setSpinner(false)
+          ...item.data(),
+        }));
+        setData(dataFromFirestore);
+        setSpinner(false);
       } else {
         const querySnapshot = await getDocs(collection(db, "products"));
-        const dataFromFirestore = querySnapshot.docs.map(item => ({
+        const dataFromFirestore = querySnapshot.docs.map((item) => ({
           id: item.id,
-          ...item.data()
-        }))
-        setData(dataFromFirestore)
-        setSpinner(false)
+          ...item.data(),
+        }));
+        setData(dataFromFirestore);
+        setSpinner(false);
       }
-    }
-    fetchNotes()
+    };
+    fetchNotes();
   }, [id]);
 
   useEffect(() => {
-    return (() => {
+    return () => {
       setData([]);
-    })
+    };
   }, []);
 
   return (
     <>
-      {
-        spinner === true
-          ?
-          <div className="d-flex justify-content-center m-5">
-            <div className="spinner-border" role="status">
-              <span className="visually-hidden ">Loading...</span>
-            </div>
+      {spinner === true ? (
+        <div className="d-flex justify-content-center m-5">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden ">Loading...</span>
           </div>
-          :
-          <ItemList items={data} />
-      }
+        </div>
+      ) : (
+        <ItemList items={data} />
+      )}
     </>
   );
 };

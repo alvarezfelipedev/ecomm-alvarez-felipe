@@ -1,7 +1,14 @@
 import { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import Button from "react-bootstrap/Button";
-import {serverTimestamp, doc, setDoc, collection, increment, updateDoc} from "firebase/firestore";
+import {
+  serverTimestamp,
+  doc,
+  setDoc,
+  collection,
+  increment,
+  updateDoc,
+} from "firebase/firestore";
 import { db } from "../../utils/FirebaseConfig";
 import "./Cart.css";
 
@@ -46,33 +53,62 @@ const Cart = () => {
       <div>
         <h1 className="titulo-cart">YOUR CART</h1>
 
-        <Button
-          className="btn-delete-all"
-          onClick={ctx.clear}
-          disabled={ctx.cartList.length === 0}
-        >
-          DELETE ALL
-        </Button>
-        <Button disabled={ctx.cartList.length === 0} onClick={createOrder}>
-          BUY NOW
-        </Button>
+        <div className="d-flex btn-delete-buy">
+          <Button
+            className="outline-secondary btn-delete-all"
+            onClick={ctx.clear}
+            disabled={ctx.cartList.length === 0}
+            variant="outline-none"
+          >
+            DELETE ALL
+          </Button>
 
-        {ctx.cartList.map((item) => (
-          <ol key={item.id}>
-            <h1>{item.titulo}</h1>
-            <h3>Price: {item.precio}</h3>
-            <h3>Quantity:{item.qty}</h3>
-            <p>Total price per Item: $ {ctx.calcTotalPerItem(item.id)}</p>
-            <img className="img-cart" src={`${item.imagen}`} alt="" />
-            <Button
-              className="btn-delete-item"
-              onClick={() => ctx.removeItem(item.id)}
-            >
-              Delete this product
-            </Button>
-          </ol>
-        ))}
-        <p>Total price: $ {ctx.calcTotal()}</p>
+          <Button
+            className="d-flex btn-buy"
+            disabled={ctx.cartList.length === 0}
+            onClick={createOrder}
+            variant="outline-none"
+          >
+            BUY NOW
+          </Button>
+        </div>
+
+        <div className="d-flex price-item">
+          <div className="d-flex item-detail">
+            {ctx.cartList.map((item) => (
+              <ol key={item.id}>
+                <div className="d-flex">
+                  <h2>{item.titulo}</h2>
+                  <Button
+                    className="btn-delete-item"
+                    variant="outline-none"
+                    onClick={() => ctx.removeItem(item.id)}
+                  >
+                    Delete this product
+                  </Button>
+                </div>
+                <div className="d-flex img-qty-item">
+                  <img
+                    className="img-cart"
+                    src={`${item.imagen}`}
+                    alt="Product selected"
+                  />
+                  <div className="qty-item">
+                    <h3>Quantity: {item.qty}</h3>
+                    <h3>Price per Item: ${item.precio}</h3>
+                    <h4>
+                      Total price per Item: ${ctx.calcTotalPerItem(item.id)}
+                    </h4>
+                  </div>
+                </div>
+              </ol>
+            ))}
+          </div>
+
+          <div className="total-price">
+            <h1>Total price: ${ctx.calcTotal()}</h1>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -30,7 +30,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           <Button
             className="btn-sumar"
             onClick={handleRateMax}
-            variant="outline-primary-none"
+            variant="outline-none"
           >
             +
           </Button>
@@ -39,7 +39,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
           <Button
             className="btn-restar"
-            variant="outline-primary-none"
+            variant="outline-none"
             onClick={handleRateMin}
           >
             -
@@ -48,7 +48,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           <Button
             className="btn-agregarAlCarro outline-dark"
             onClick={() => onAdd(contador)}
-            variant="outline-secondary"
+            variant="outline-none"
             disabled={(contador === 0 && true) || (stock === 0 && true)}
           >
             Add to cart

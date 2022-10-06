@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Carrito from "../CartWidget/CartWidget";
 import "./NavBar.css";
 
-
 const NavBar = () => {
   return (
     <>
@@ -13,23 +12,29 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand>
             <Link to="/">
-              <img className="logo" src="/adidas.svg" alt="Logo de Adidas" width={50} />
+              <img
+                className="logo"
+                src="/adidas.svg"
+                alt="Logo de Adidas"
+                width={50}
+              />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className="justify-content-center">
+            className="justify-content-center"
+          >
             <Nav className="categorias">
-                <Link to="category/jersey" className="categoria-">
-                  Jersey
-                </Link>
-                <Link to="category/ball" className="categoria-">
-                  Ball
-                </Link>
-                <Link to="category/cleats" className="categoria-">
-                  Cleats
-                </Link>
+              <Link to="category/jersey" className="categoria-">
+                Jersey
+              </Link>
+              <Link to="category/ball" className="categoria-">
+                Ball
+              </Link>
+              <Link to="category/cleats" className="categoria-">
+                Cleats
+              </Link>
             </Nav>
           </Navbar.Collapse>
           <Nav className="justify-content-end  " activeKey="/home">
@@ -39,8 +44,7 @@ const NavBar = () => {
               </Link>
             </Nav.Item>
             <Navbar.Brand>
-              <Link to="/cart">
-              </Link>
+              <Link to="/cart"></Link>
             </Navbar.Brand>
           </Nav>
         </Container>

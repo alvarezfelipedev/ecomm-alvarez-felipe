@@ -19,7 +19,10 @@ const Item = ({ id, titulo, precio, imagen, tipo }) => {
           <Card.Title className="tipo">{tipo}</Card.Title>
           <Card.Text className="precio">${precio}</Card.Text>
           <Link className="details" to={`/item/${id}`}>
-            <Button className="rotate-vertical-center btn-details">
+            <Button
+              className="rotate-vertical-center btn-details"
+              variant="outline-none"
+            >
               Details
             </Button>
           </Link>
