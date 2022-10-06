@@ -1,9 +1,8 @@
-// import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import Button from "react-bootstrap/Button";
-import { serverTimestamp, doc, setDoc, collection, increment, updateDoc } from 'firebase/firestore'
-import { db } from '../../utils/FirebaseConfig'
+import {serverTimestamp, doc, setDoc, collection, increment, updateDoc} from "firebase/firestore";
+import { db } from "../../utils/FirebaseConfig";
 import "./Cart.css";
 
 const Cart = () => {
@@ -11,50 +10,52 @@ const Cart = () => {
 
   // Generar orden de compra:
   const createOrder = async () => {
-    const itemsForDB = ctx.cartList.map(item => ({
+    const itemsForDB = ctx.cartList.map((item) => ({
       id: item.id,
       title: item.titulo,
       price: item.precio,
-      quantity: item.qty
-    }))
+      quantity: item.qty,
+    }));
     let order = {
       buyer: {
-        name: 'Lionel Messi',
-        email: 'lionelmessi10@gmail.com',
-        phone: '1122573990'
+        name: "Lionel Messi",
+        email: "lionelmessi10@gmail.com",
+        phone: "1122573990",
       },
       items: itemsForDB,
       date: serverTimestamp(),
-      total: ctx.calcTotal()
-    }
-    const newOrderRef = doc(collection(db, "orders"))
+      total: ctx.calcTotal(),
+    };
+    const newOrderRef = doc(collection(db, "orders"));
     await setDoc(newOrderRef, order);
 
     ctx.cartList.forEach(async (item) => {
       const itemRef = doc(db, "products", item.id);
       await updateDoc(itemRef, {
-        stock: increment(-item.qty)
+        stock: increment(-item.qty),
       });
     });
     ctx.clear();
-    // await Swal.fire({
-    //   icon: 'success',
-    //   title: `SUCCESSFUL PURCHASE`,
-    //   text: `Your order has been created! This is your ID order: ${newOrderRef.id}`,
-    //   button: 'Okay'
-    // });
-    alert(`Your order has been created! This is your ID order: ${newOrderRef.id}`)
-  }
+    alert(
+      `Your order has been created! This is your ID order: ${newOrderRef.id}`
+    );
+  };
 
   return (
     <>
       <div>
         <h1 className="titulo-cart">YOUR CART</h1>
 
-        <Button className="btn-delete-all" onClick={ctx.clear} disabled={ctx.cartList.length === 0 }>
+        <Button
+          className="btn-delete-all"
+          onClick={ctx.clear}
+          disabled={ctx.cartList.length === 0}
+        >
           DELETE ALL
         </Button>
-        <Button disabled={ctx.cartList.length === 0 } onClick={createOrder}>BUY NOW</Button>
+        <Button disabled={ctx.cartList.length === 0} onClick={createOrder}>
+          BUY NOW
+        </Button>
 
         {ctx.cartList.map((item) => (
           <ol key={item.id}>
@@ -63,7 +64,10 @@ const Cart = () => {
             <h3>Quantity:{item.qty}</h3>
             <p>Total price per Item: $ {ctx.calcTotalPerItem(item.id)}</p>
             <img className="img-cart" src={`${item.imagen}`} alt="" />
-            <Button className="btn-delete-item" onClick={() => ctx.removeItem(item.id)}>
+            <Button
+              className="btn-delete-item"
+              onClick={() => ctx.removeItem(item.id)}
+            >
               Delete this product
             </Button>
           </ol>

@@ -1,5 +1,4 @@
 import React from "react";
-// import { MdOutlineShoppingBag } from "react-icons/md";
 import { CartContext } from "../CartContext/CartContext";
 import { useContext } from "react";
 import "./CartWidget.css";

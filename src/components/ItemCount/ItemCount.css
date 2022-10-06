@@ -1,20 +1,56 @@
-.btn-sumar {
-    padding: 10px;
-    margin: 10px;
-}
+/* ---IMPORTS--- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-.btn-restar {
-    padding: 10px;
-    margin: 10px;
-}
-
-.btn-agregarAlCarro {
-    padding: 10px;
-    margin: 10px;
-
-}
+/* --- CONTADOR --- */
 
 .card {
-    display: flex;
-    margin: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+
+.btn-sumar {
+    font-family: 'Poppins', sans-serif;
+    padding: 11px;
+    margin: 0 5px;
+    border-color: black;
+}
+
+.btn-sumar:hover {
+    color: white;
+    background-color: black;
+}
+
+
+.card span {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.btn-restar {
+    font-family: 'Poppins', sans-serif;
+    padding: 11px;
+    margin: 0 5px;
+    border-color: black;
+}
+
+.btn-restar:hover {
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+
+.btn-agregarAlCarro {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    border-color: black;
+    padding: 11px;
+    margin: 0 10px;
+}
+
+.btn-agregarAlCarro:hover {
+    color: black;
+    background-color: #ffc107;
+    border: none;
 }

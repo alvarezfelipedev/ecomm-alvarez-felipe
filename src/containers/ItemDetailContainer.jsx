@@ -24,13 +24,17 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-    {
-      spinner === true
-        ? <div className="d-flex">
-            <img className="ball rotate-vertical-center" src="https://i.ibb.co/cNQDsBq/ball-spinner.webp" alt="loading" />
+      {
+        spinner === true
+          ?
+          <div className="d-flex justify-content-center m-5">
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden ">Loading...</span>
+            </div>
           </div>
-        : <ItemDetail items={data} />
-    }
+          :
+          <ItemDetail items={data} />
+      }
     </>
   );
 };

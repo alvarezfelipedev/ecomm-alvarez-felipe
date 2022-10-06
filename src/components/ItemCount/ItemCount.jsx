@@ -25,12 +25,12 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
   return (
     <>
-      <Card className="card" style={{ width: "20rem" }}>
+      <Card className="card" variant="none">
         <Card.Body>
           <Button
             className="btn-sumar"
             onClick={handleRateMax}
-            variant="outline-primary"
+            variant="outline-primary-none"
           >
             +
           </Button>
@@ -39,7 +39,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
           <Button
             className="btn-restar"
-            variant="outline-primary"
+            variant="outline-primary-none"
             onClick={handleRateMin}
           >
             -
@@ -48,8 +48,8 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           <Button
             className="btn-agregarAlCarro outline-dark"
             onClick={() => onAdd(contador)}
-            variant="primary"
-            disabled={stock === 0 && true }
+            variant="outline-secondary"
+            disabled={(contador === 0 && true) || (stock === 0 && true)}
           >
             Add to cart
           </Button>

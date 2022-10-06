@@ -44,14 +44,17 @@ const ItemListContainer = () => {
 
   return (
     <>
-    {
-      spinner === true 
-        ? 
-          <div class="d-flex justify-content-center">
-            <img className="ball rotate-vertical-center" src="https://i.ibb.co/cNQDsBq/ball-spinner.webp" alt="loading" /> 
-        </div>
-        : <ItemList items={data} />
-    }
+      {
+        spinner === true
+          ?
+          <div className="d-flex justify-content-center m-5">
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden ">Loading...</span>
+            </div>
+          </div>
+          :
+          <ItemList items={data} />
+      }
     </>
   );
 };

@@ -1,73 +1,124 @@
-/* ----- imports -----*/
+/* ---IMPORTS--- */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 15px;
+    color: #212326;
+
 }
 
 
-/* Sweet Alert */
+/* --- SWEET ALERT --- */
 
 #custom-target {
     margin-top: 15px;
 }
 
 .position-absolute {
-    position:sticky;
+    position: sticky;
     margin-top: 70px;
 }
 
 
-/* Detalles del Producto */
+/* --- DETALLES DEL PRODUCTO --- */
 
-.body {
+.caja-contenedora {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    margin: 40px 0;
 }
 
-.caja-contenedora{
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    height: 380px;
-    background-color: wheat;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+
+.imagen {
+    width: 27%;
+    /* ---Shadow--- */
+    box-shadow: -1px 2px 6px 0px rgba(115, 115, 115, 0.76);
+    -webkit-box-shadow: -1px 2px 6px 0px rgba(115, 115, 115, 0.76);
+    -moz-box-shadow: -1px 2px 6px 0px rgba(115, 115, 115, 0.76);
+
 }
 
-.body .img-caja{
-    position: relative;
-    min-width: 300px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.detail-container {
+    width: 35%;
+    margin-left: 100px;
 }
 
-.img-caja .imagen {
-    width: 20%;
+
+.titulo-tipo h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
 }
 
-.titulo-tipo .titulo- {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.7em;
-    font-weight: bold;
+.titulo-tipo h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4em;
+    margin-top: 10px;
 }
 
-/* .titulo-tipo h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.5em;
-} */
 
-/* .descripcion-caja h2,
+.descripcion-caja h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.descripcion-caja h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.774);
+}
+
+
 .talles-caja h3 {
-    font-size: 0.7em;
-    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    margin-top: 5%;
+}
 
-} */
+.talles-caja ul button {
+    margin-right: 3%;
+    padding: 1% 2%;
+    background-color: transparent;
+    border: 1px solid #000000;
+
+}
+
+.talles-caja ul button:hover {
+    color: white;
+    background-color: black;
+}
+
+
+.stock-container {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.stock-container h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+}
+
+
+.precio-container {
+    margin-top: 3%;
+}
+
+.precio-container h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.precio-btnCount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
