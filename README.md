@@ -11,10 +11,10 @@
     <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C" alt="LinkedIn"/>
   </a>
   <a href="https://github.com/alvarezfelipedev" target="_blank">
-    <img src="https://img.shields.io/badge/github-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white&color=071A2C" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/github-%231877F2.svg?&style=for-the-badge&logo=github&logoColor=white&color=071A2C" alt="GitHub"/>
   </a> 
-  <a href="https://www.linkedin.com/in/nfelipealvarez/" target="_blank">
-    <img src="https://img.shields.io/badge/vercel-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C" alt="LinkedIn"/>
+  <a href="https://ecommerce-alvarez-felipe.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Vercel-071A2C?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
   </a>
 </div>
 
