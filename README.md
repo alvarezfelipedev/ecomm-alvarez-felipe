@@ -44,21 +44,21 @@ https://user-images.githubusercontent.com/94803906/194620873-23a67a47-e906-426b-
 ## Instalarlo e Iniciarlo
 <br />
 
-> Clonar repositorio
+> 1. Clonar repositorio
 
 ```sh
 git clone https://github.com/alvarezfelipedev/ecomm-alvarez-felipe.git
 ```
 <br />
 
-> Instalar npm
+> 2. Instalar npm
 
 ```sh
 npm i
 ```
 <br />
 
-> Iniciar proyecto
+> 3. Iniciar proyecto
 
 ```sh
 npm start
