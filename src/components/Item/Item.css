@@ -1,5 +1,4 @@
 /* ---IMPORTS--- */
-@import url(//db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
 
@@ -24,7 +23,7 @@
 
 
 .titulo {
-    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 2px;
@@ -35,7 +34,7 @@
 
 
 .tipo {
-    font-family: AdihausDIN;
+    font-family: 'Poppins', sans-serif;
     font-size: 1em;
     text-align: start;
     letter-spacing: normal;

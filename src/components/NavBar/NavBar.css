@@ -1,9 +1,9 @@
 /* ---IMPORTS--- */
-@import url(//db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 
 .categorias {
-    font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 45px;
     letter-spacing: 1.87px;
 }
