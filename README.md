@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# E-commerce con React <img src="https://i.giphy.com/media/eNAsjO55tPbgaor7ma/200w.webp" width="25"> 
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+<div align="center">  
+  <p>Este proyecto simula los pasos que hace el usuario al realizar la compra.</p>
+  <p>Fue realizado con React, React Router v6.4.1 para su navegación, Firebase para almacenar los datos de cada producto y la orden que realiza el usuario, CSS y Bootstrap v5.2.2 para los estilos.</p>
+  <a href="https://www.linkedin.com/in/nfelipealvarez/" target="_blank">
+    <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C" alt="LinkedIn"/>
+  </a>
+  <a href="https://github.com/alvarezfelipedev" target="_blank">
+    <img src="https://img.shields.io/badge/github-%231877F2.svg?&style=for-the-badge&logo=facebook&logoColor=white&color=071A2C" alt="GitHub"/>
+  </a> 
+  <a href="https://www.linkedin.com/in/nfelipealvarez/" target="_blank">
+    <img src="https://img.shields.io/badge/vercel-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C" alt="LinkedIn"/>
+  </a>
+</div>
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Preview
+<br />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img  src="https://i.ibb.co/BCfSM1j/escritorio.png" width="80%">
+<br />
+<br />
 
-### `npm test`
+<img  src="https://i.ibb.co/KjHDY7x/detail.png" width="80%">
+<br />
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img  src="https://i.ibb.co/YZdBSQD/cart.png" width="80%">
+<br />
+<br />
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://user-images.githubusercontent.com/94803906/194620873-23a67a47-e906-426b-bc84-bfa7b192aabd.mp4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br />
+<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalarlo e Iniciarlo
+<br />
 
-### `npm run eject`
+> Clonar repositorio
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+git clone https://github.com/alvarezfelipedev/ecomm-alvarez-felipe.git
+```
+<br />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Instalar npm
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+npm i
+```
+<br />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Iniciar proyecto
 
-## Learn More
+```sh
+npm start
+```
+<br />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Documentacion utilizada para su desarrollo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [React](https://es.reactjs.org/docs/getting-started.html)
+* [Firebase](https://firebase.google.com/docs)
+* [React Router](https://reactrouter.com/en/main)
+* [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
+* [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+* [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 
-### Code Splitting
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,firebase,bootstrap,css" />
+  </a>
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Fuentes, Imagenes e Iconos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserra)
+* [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono?query=Noto+Sans+Mono)
+* [Oswald](https://fonts.google.com/specimen/Oswald?query=oswald)
+* [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
+* [Quicksand](https://fonts.google.com/specimen/Quicksand?query=quick)
+* [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro?query=source)
+* [Adidas Football](https://www.instagram.com/adidasfootball/)
+* [Imgbb](https://imgbb.com/)
+* [Iconos8](https://iconos8.es/icons)
 
-### Making a Progressive Web App
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Servidor utilizado
 
-### Advanced Configuration
+* [Vercel](https://vercel.com/) <img src="https://skillicons.dev/icons?i=vercel" width="15"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br />
 
-### Deployment
+## Contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Alvarez Felipe 🇦🇷 - n.felipealvarez01@gmail.com
 
-### `npm run build` fails to minify
+Project Link: [Vercel.com](https://ecommerce-alvarez-felipe.vercel.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right"><a href="#readme-top">Volver al principio</a></p>
