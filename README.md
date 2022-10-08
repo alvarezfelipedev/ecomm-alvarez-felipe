@@ -81,7 +81,7 @@ npm start
 </p>
 
 
-## Fuentes, Imagenes e Iconos 🔡🌃🏞️
+## Fuentes, Imagenes, Recursos e Iconos 🔡🌃🏞️
 
 * [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserra)
 * [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono?query=Noto+Sans+Mono)
@@ -89,6 +89,7 @@ npm start
 * [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins)
 * [Quicksand](https://fonts.google.com/specimen/Quicksand?query=quick)
 * [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro?query=source)
+* [SweetAlert](https://sweetalert2.github.io/)
 * [Adidas Football](https://www.instagram.com/adidasfootball/)
 * [Imgbb](https://imgbb.com/)
 * [Iconos8](https://iconos8.es/icons)
