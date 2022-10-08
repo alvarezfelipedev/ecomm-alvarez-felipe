@@ -20,7 +20,7 @@
 
 <br />
 
-## Preview
+## Preview 👀
 <br />
 
 <img  src="https://i.ibb.co/BCfSM1j/escritorio.png" width="80%">
@@ -41,7 +41,7 @@ https://user-images.githubusercontent.com/94803906/194620873-23a67a47-e906-426b-
 <br />
 <br />
 
-## Instalarlo e Iniciarlo
+## Instalarlo e Iniciarlo 🚀
 <br />
 
 > 1. Clonar repositorio
@@ -65,7 +65,7 @@ npm start
 ```
 <br />
 
-## Documentacion utilizada para su desarrollo
+## Documentacion utilizada para su desarrollo 📖
 
 * [React](https://es.reactjs.org/docs/getting-started.html)
 * [Firebase](https://firebase.google.com/docs)
@@ -81,7 +81,7 @@ npm start
 </p>
 
 
-## Fuentes, Imagenes e Iconos
+## Fuentes, Imagenes e Iconos 🔡🌃🏞️
 
 * [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserra)
 * [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono?query=Noto+Sans+Mono)
@@ -95,13 +95,12 @@ npm start
 
 <br />
 
-## Servidor utilizado
+## Servidor utilizado 💻
 
 * [Vercel](https://vercel.com/) <img src="https://skillicons.dev/icons?i=vercel" width="15"/>
 
-<br />
 
-## Contacto
+## Contacto 📧
 
 Alvarez Felipe 🇦🇷 - n.felipealvarez01@gmail.com
 
