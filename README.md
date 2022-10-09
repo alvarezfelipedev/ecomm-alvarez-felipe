@@ -93,6 +93,8 @@ npm start
 * [Adidas Football](https://www.instagram.com/adidasfootball/)
 * [Imgbb](https://imgbb.com/)
 * [Iconos8](https://iconos8.es/icons)
+* [AnimatiSS](https://xsgames.co/animatiss/)
+
 
 <br />
 
